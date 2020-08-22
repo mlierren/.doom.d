@@ -64,6 +64,8 @@
               " " filename)))
 
 (setq org-roam-directory "~/Dropbox/org-roam")
+;;(setq org-roam-file-extensions '("org" "txt"))
+;;(add-to-list 'auto-mode-alist '("\.txt\'" . org-mode))
 
 (use-package org-journal
   :bind
@@ -76,7 +78,10 @@
 
 (setq org-journal-enable-agenda-integration t)
 
-(windmove-default-keybindings)
+(global-set-key (kbd "C-c <left>") 'windmove-left)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+(global-set-key (kbd "C-c <up>") 'windmove-up)
+(global-set-key (kbd "C-c <down>") 'windmove-down)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
