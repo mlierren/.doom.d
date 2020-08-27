@@ -78,10 +78,13 @@
 
 (setq org-journal-enable-agenda-integration t)
 
-(global-set-key (kbd "C-c <left>") 'windmove-left)
-(global-set-key (kbd "C-c <right>") 'windmove-right)
-(global-set-key (kbd "C-c <up>") 'windmove-up)
-(global-set-key (kbd "C-c <down>") 'windmove-down)
+(global-set-key (kbd "C-c w <left>") 'windmove-left)
+(global-set-key (kbd "C-c w <right>") 'windmove-right)
+(global-set-key (kbd "C-c w <up>") 'windmove-up)
+(global-set-key (kbd "C-c w <down>") 'windmove-down)
+
+(global-set-key (kbd "C-v") 'View-scroll-half-page-forward)
+(global-set-key (kbd "M-v") 'View-scroll-half-page-backward)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
