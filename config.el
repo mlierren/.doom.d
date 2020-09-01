@@ -83,8 +83,8 @@
 (global-set-key (kbd "C-c w <up>") 'windmove-up)
 (global-set-key (kbd "C-c w <down>") 'windmove-down)
 
-(global-set-key (kbd "C-v") 'View-scroll-half-page-forward)
-(global-set-key (kbd "M-v") 'View-scroll-half-page-backward)
+;;(global-set-key (kbd "C-v") 'View-scroll-half-page-forward)
+;;(global-set-key (kbd "M-v") 'View-scroll-half-page-backward)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
