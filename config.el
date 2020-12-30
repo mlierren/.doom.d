@@ -67,6 +67,10 @@
 ;;(setq org-roam-file-extensions '("org" "txt"))
 ;;(add-to-list 'auto-mode-alist '("\.txt\'" . org-mode))
 
+(use-package! md-roam
+  :config
+  (setq md-roam-file-extension-single "md"))
+
 (use-package org-journal
   :bind
   ("C-c n j" . org-journal-new-entry)
