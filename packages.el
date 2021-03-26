@@ -25,7 +25,9 @@
 ;; If you'd like to disable a package included with Doom, you can do so here
 ;; with the `:disable' property:
 ;(package! builtin-package :disable t)
-(package! undo-fu-mode :disable t)
+
+;; Solving ein undo issues
+;;(package! undo-fu-mode :disable t)
 
 ;; You can override the recipe of a built in package without having to specify
 ;; all the properties for `:recipe'. These will inherit the rest of its recipe
@@ -41,9 +43,7 @@
 ;; Use `:pin' to specify a particular commit to install.
 ;(package! builtin-package :pin "1a2b3c4d5e")
 
-(package! md-roam
-  :recipe (:host github 
-  :repo "nobiot/md-roam"))
+(package! jupyter)
 
 ;; Doom's packages are pinned to a specific commit and updated from release to
 ;; release. The `unpin!' macro allows you to unpin single packages...

@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+(setq user-full-name "Darren Kim"
+      user-mail-address "darren92.kim@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -25,12 +25,11 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;;(setq doom-theme 'doom-one)
 (setq doom-theme 'doom-one-light)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Dropbox/org-roam")
+(setq org-directory "~/Dropbox/org-roam/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -45,9 +44,13 @@
 
 (after! ein
   (setq ein:output-area-inlined-images t)
-  (setq ein:worksheet-enable-undo t))
+  (setq ein:worksheet-enable-undo t)
+  (org-babel-do-load-languages
+        'org-babel-load-languages
+        '((emacs-lisp . nil)
+          (ein-python . t))))
 
-(after! tramp 
+(after! tramp
   (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
   (setq nrepl-use-ssh-fallback-for-remote-hosts t))
 
@@ -64,12 +67,12 @@
               " " filename)))
 
 (setq org-roam-directory "~/Dropbox/org-roam")
-;;(setq org-roam-file-extensions '("org" "txt"))
+(setq org-roam-file-extensions '("org" "md"))
 ;;(add-to-list 'auto-mode-alist '("\.txt\'" . org-mode))
 
-(use-package! md-roam
-  :config
-  (setq md-roam-file-extension-single "md"))
+;;(use-package! md-roam
+;;  :config
+;;  (setq md-roam-file-extension-single "md"))
 
 (use-package org-journal
   :bind
