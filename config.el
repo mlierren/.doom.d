@@ -54,8 +54,8 @@
   (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
   (setq nrepl-use-ssh-fallback-for-remote-hosts t))
 
-(after! (:and treemacs ace-window)
-  (setq aw-ignored-buffers (delq 'treemacs-mode aw-ignored-buffers)))
+(after! treemacs
+  (global-set-key (kbd "C-M-0") 'treemacs-select-window))
 
 (setq ibuffer-formats
       '((mark modified read-only " "
